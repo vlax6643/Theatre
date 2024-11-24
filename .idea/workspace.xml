@@ -5,52 +5,130 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c16df447-0cc3-4a04-910a-b36cfc9b6643" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/config/MvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/HallsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/MainController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/RegistrationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/SessionsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Ganre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Hall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Session.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Show.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/GanreRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/HallRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/SessionRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/ShowRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/TicketRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/UsersRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/hallList.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/hallsAdmin.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/showlist.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/sessionList.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/sessionsAdmin.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/sessionsForShow.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/showDetails.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/userList.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/DTO/OrderDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/Service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/config/DataInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/OrdersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/ProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/ShowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Seat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/OrderRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/SeatRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editSession.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editShow.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/hallForSession.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/orderDetails.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/showsAdmin.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/showsList.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/14675e1b-d4cb-4ba7-8d4e-a9df3fae882c_prof2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1e74ca44-adf3-4036-87d2-064faecdf4bc_b1d3db0a2346e9e4844a0df603a3d568.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/2023ea22-42ab-4c27-8569-4e60e2af1882_im.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/29a53abb-fbdc-4543-b257-fd7a1a10d6cb_images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/38fbbc60-9c60-45d6-9c2b-67ded50b63f8_b618d6e67a874f22b622af254b62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/4468cf36-1653-4a16-a8cb-e4ec39a0294e_im.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/4b8d8520-9066-486d-a818-d27216d5e1f4_png-klev-club-ean2-p-snegurochka-png-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/4df24e8a-1ce9-4024-a4c3-cfc3e2a15e79_download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/5c31f0bb-4b76-4720-8696-643f9281b2f3_sticker.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/61f12028-01d9-4551-be5f-72077deef099_b618d6e67a874f22b622af254b62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/68b7e591-4510-4c79-b196-cdb79169b178_png-klev-club-ean2-p-snegurochka-png-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/696646e9-7c55-45a1-8158-bd3881f81008_b618d6e67a874f22b622af254b62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/717b796e-ec80-4d6a-b9c7-62a6386f5bc5_youloveit_ru_smurfs_3d_christmas06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/91408d67-17f2-4d56-9eaa-b5bd5fa5c759_images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/996a35a6-e9aa-49c0-809b-79b9e37fc863_b618d6e67a874f22b622af254b62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/ad6ce048-6b9b-415c-98a7-edb214661651_images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/bdd7346a-1429-46b3-82f5-5716d347e216_youloveit_ru_smurfs_3d_christmas06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/c04ab8b8-c393-4d28-b5cb-b0dceca66f09_download.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/c145c03e-3bed-4d5b-86b7-0791e574e5e3_b618d6e67a874f22b622af254b62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/download.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/e08ccfe0-40ff-48e2-8edf-8652cfb53f1c_4df24e8a-1ce9-4024-a4c3-cfc3e2a15e79_download.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/ea2cf0ed-ab6e-4992-887d-623c9ed3a044_4338f75c-85e3-4764-97f4-62c37bf4af6b_images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/ee09977d-e2e3-4a6d-8989-710d13338839_png-klev-club-ean2-p-snegurochka-png-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/eecdc6b5-5434-4daf-8e2c-fcfc7f775dcf_b618d6e67a874f22b622af254b62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/ef4c1485-8ecd-42cd-97bc-77c36fd792f2_youloveit_ru_smurfs_3d_christmas06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/f34c6457-4251-431d-a783-abf5748775e5_b1d3db0a2346e9e4844a0df603a3d568.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/f8e5a792-74c4-4853-a4b4-a5ef96136c88_ll.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/fda40089-57e2-4c47-ad2e-3b8403a47888_ll.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/feeb6627-7dd6-426b-ba30-a7fca3f1766c_sticker.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/placeholder.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/HallsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/HallsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/SessionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/SessionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Ganre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Ganre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Hall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Hall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Show.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/Ticket.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/HallRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/HallRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/SessionRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/SessionRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/ShowRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/ShowRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/TicketRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/UsersRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/UsersRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/hallList.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/hallList.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/hallsAdmin.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/hallsAdmin.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/showlist.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/showlist.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sessionList.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sessionList.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sessionsAdmin.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sessionsAdmin.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sessionsForShow.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sessionsForShow.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/showDetails.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/showDetails.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userList.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userList.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/4df24e8a-1ce9-4024-a4c3-cfc3e2a15e79_download.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +147,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -78,29 +159,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/vlax6/IdeaProjects/untitled6/src/main/java/ru/VladHendel/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/vlax6/IdeaProjects/cinema-ticket-office",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "C:/Users/vlax6/IdeaProjects/untitled6/src/main/java/ru/VladHendel/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vlax6\IdeaProjects\untitled6\src\main\resources\templates" />
@@ -125,7 +213,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731523516415</updated>
       <workItem from="1731523517557" duration="8224000" />
-      <workItem from="1731613288965" duration="74466000" />
+      <workItem from="1731613288965" duration="194383000" />
     </task>
     <servers />
   </component>

@@ -5,4 +5,5 @@ import ru.VladHendel.domain.Hall;
 
 public interface HallRepo extends JpaRepository<Hall, Long> {
     Hall findByName (String name);
+
 }

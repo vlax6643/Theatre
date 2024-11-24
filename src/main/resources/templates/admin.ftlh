@@ -18,7 +18,7 @@
                 <input type="file" name="file">
                 <select name="ganreId">
                     <#list ganres as ganre>
-                        <option value="${ganre.id}">${ganre.name}</option>
+                        <option value="${ganre.id?c}">${ganre.name}</option>
                     </#list>
                 </select>
                 <input type="hidden" name="_csrf" value="${_csrf.token}" />
@@ -33,7 +33,7 @@
                 <b>${show.description}</b>
                 </#if>
                 <form action="/admin/deleteShow" method="post" style="display:inline;">
-                    <input type="hidden" name="showId" value="${show.id}" />
+                    <input type="hidden" name="showId" value="${show.id?c}" />
                     <input type="hidden" name="_csrf" value="${_csrf.token}" />
                     <button type="submit">Delete</button>
                 </form>
@@ -54,7 +54,7 @@
         <div>Список жанров:</div>
         <#list ganres as ganre>
             <div>
-                <b>${ganre.id}</b>
+                <b>${ganre.id?c}</b>
                 <b>${ganre.name}</b>
             </div>
         <#else>

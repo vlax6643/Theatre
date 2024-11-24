@@ -12,8 +12,8 @@
             <div>
                 <p>Дата: ${session.date?string("yyyy-MM-dd HH:mm")}</p>
                 <p>Зал: ${session.hall.name}</p>
-                <p>Доступные места: ${session.availableSeats}</p>
-                <a href="/session/${session.id}">Выбрать этот сеанс</a>
+                <p>Доступные места: ${session.hall.seatCapacity}</p>
+                <a href="/order/${session.id?c}" class="btn btn-primary">Выбрать этот сеанс</a>
             </div>
         </#list>
     </div>
@@ -21,3 +21,4 @@
         <div>Нет доступных сеансов для этого спектакля</div>
     </#if>
 </@c.page>
+

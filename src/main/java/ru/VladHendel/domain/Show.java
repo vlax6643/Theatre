@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -13,9 +15,9 @@ public class Show {
     @Column(name = "id")
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private Long id;
     private String title;
-        private Integer duration;
+    private Integer duration;
     @Column(name = "age_rating", nullable = true)
     private Integer ageRating;
 
@@ -23,8 +25,10 @@ public class Show {
     @JoinColumn(name = "ganre_id", nullable = false)
     private Ganre ganre;
     private String filename;
-
+    @Column(length = 1000)
     private String description;
+    @OneToMany(mappedBy = "show", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Session> sessions = new ArrayList<>();
 
     public Show() {
     }

@@ -1,23 +1,15 @@
-
 <#import "parts/common.ftlh" as c>
 <@c.page>
     <div>Список залов:</div>
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Назввание</th>
-            <th>Вместительность</th>
-        </tr>
-        </thead>
-        <tbody>
+    <div class="card">
         <#list halls as hall>
-            <tr>
-                <td>${hall.id}</td>
-                <td>${hall.name}</td>
-                <td>${hall.seatCapacity}</td>
-            </tr>
+            <div class="card-body d-flex align-items-center justify-content-between">
+                <div>
+                    <h5 class="card-title">${hall.name} зал</h5>
+                    <p><strong>Вместительность:</strong> ${hall.seatCapacity} мест</p>
+                </div>
+                <a href="/session?filter=&hallId=${hall.id?c}" class="btn btn-primary">Сеансы в зале</a>
+            </div>
         </#list>
-        </tbody>
-    </table>
+    </div>
 </@c.page>

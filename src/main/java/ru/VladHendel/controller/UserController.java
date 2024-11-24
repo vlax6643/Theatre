@@ -6,26 +6,41 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import ru.VladHendel.Service.UserService;
 import ru.VladHendel.domain.Role;
 import ru.VladHendel.domain.User;
+import ru.VladHendel.repos.OrderRepo;
 import ru.VladHendel.repos.UsersRepo;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/user")
 @PreAuthorize("hasAuthority('ADMIN')")
 public class UserController {
+
     @Autowired
-    UsersRepo usersRepo;
+    UserService userService;
+    @Autowired
+    OrderRepo orderRepo;
 
     @GetMapping
-    public String userList(Model model){
-        model.addAttribute("users", usersRepo.findAll());
+    public String userList(@RequestParam(required = false, defaultValue = "") String filter, Model model){
+        List<User> users;
+        if (filter != null && !filter.isEmpty()) {
+            User user = userService.findByUsername(filter);
+            if (user != null) {
+                users = new ArrayList<>();
+                users.add(user);
+            } else {
+                users = new ArrayList<>();
+            }
+        } else {
+           users = userService.findAll();
+        }
+        model.addAttribute("users", users);
+        model.addAttribute("filter", filter);
         return "userList";
     }
 
@@ -42,22 +57,18 @@ public class UserController {
             @RequestParam(required = false) String[] roles,
             @RequestParam("userId") User user) {
 
-        user.setUsername(username);
-        user.getRoles().clear();
-
-        if (roles != null) {
-            for (String role : roles) {
-                user.getRoles().add(Role.valueOf(role));
-            }
-        }
-
-        usersRepo.save(user);
+        userService.saveUser(user, username ,roles);
         return "redirect:/user";
     }
 
     @PostMapping("/deleteUser")
     public String deleteUser(@RequestParam Long userId) {
-        usersRepo.deleteById(userId);
+        userService.deleteById(userId);
+        return "redirect:/user";
+    }
+    @PostMapping("/order/{orderId}/cancel")
+    public String cancelOrder(@PathVariable Long orderId) {
+        orderRepo.deleteById(orderId);
         return "redirect:/user";
     }
 

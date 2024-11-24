@@ -5,7 +5,8 @@
         <h2>Add a New Hall</h2>
         <form action="/hall/addHall" method="post">
             <input type="text" name="hallName" placeholder="Enter Hall Name" required />
-            <input type="number" name="seatCapacity" placeholder="Enter Seat Capacity" required />
+            <input type="number" name="rows" placeholder="Enter rows Capacity" required />
+            <input type="number" name="seatsPerRow" placeholder="Enter seats per rows Capacity" required />
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <button type="submit">Add Hall</button>
         </form>
@@ -29,7 +30,7 @@
                     <td>${hall.seatCapacity}</td>
                     <td>
                         <form action="/hall/delete" method="post" style="display:inline;">
-                            <input type="hidden" name="hallId" value="${hall.id}" />
+                            <input type="hidden" name="hallId" value="${hall.id?c}" />
                             <input type="hidden" name="_csrf" value="${_csrf.token}" />
                             <button type="submit">Delete</button>
                         </form>

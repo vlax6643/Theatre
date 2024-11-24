@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ru.VladHendel.domain.Ganre;
 import ru.VladHendel.domain.Hall;
+import ru.VladHendel.domain.Seat;
 import ru.VladHendel.domain.Show;
 import ru.VladHendel.repos.HallRepo;
+import ru.VladHendel.repos.SeatRepo;
 
 import java.util.Map;
 
@@ -20,33 +22,54 @@ import java.util.Map;
 @RequestMapping("/hall")
 public class HallsController {
     @Autowired
-    HallRepo hallRepo;
+    private HallRepo hallRepo;
+    @Autowired
+    private SeatRepo seatRepo;
 
     @GetMapping
-    public String hallsList(Model model){
+    public String hallsList(Model model) {
         model.addAttribute("halls", hallRepo.findAll());
         return "hallList";
     }
 
-
     @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping("/addHall")
     public String addHall(@RequestParam String hallName,
-                          @RequestParam int seatCapacity,
-                          Map<String, Object> model) {
-        if (hallName != null && !hallName.isEmpty()) {
-            Hall hall = new Hall();
-            hall.setName(hallName);
-            hall.setSeatCapacity(seatCapacity);
-            hallRepo.save(hall);
+                          @RequestParam int rows,
+                          @RequestParam int seatsPerRow,
+                          Model model) {
+        if (hallName == null || hallName.isBlank() || rows <= 0 || seatsPerRow <= 0) {
+            model.addAttribute("error", "Invalid input");
+            return "hallsAdmin";
         }
-        Iterable<Hall> halls = hallRepo.findAll();
-        model.put("halls", halls);
+
+        Hall hall = new Hall();
+        hall.setName(hallName);
+        hall.setRows(rows);
+        hall.setSeatsPerRow(seatsPerRow);
+        hallRepo.save(hall);
+
+        for (int row = 1; row <= hall.getRows(); row++) {
+            for (int place = 1; place <= hall.getSeatsPerRow(); place++) {
+                Seat seat = new Seat();
+                seat.setRow((byte) row);
+                seat.setPlace((byte) place);
+                seat.setHall(hall);
+                seatRepo.save(seat);
+            }
+        }
+
         return "redirect:/hall/admin";
     }
+
     @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping("/delete")
-    public String deleteHall(@RequestParam Long hallId) {
+    public String deleteHall(@RequestParam Long hallId, Model model) {
+        if (!hallRepo.existsById(hallId)) {
+            model.addAttribute("error", "Hall not found");
+            return "hallsAdmin";
+        }
+
         hallRepo.deleteById(hallId);
         return "redirect:/hall/admin";
     }
@@ -57,5 +80,4 @@ public class HallsController {
         model.addAttribute("halls", hallRepo.findAll());
         return "hallsAdmin";
     }
-
 }
