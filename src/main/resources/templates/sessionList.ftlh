@@ -5,14 +5,21 @@
         <div class="form-row mb-4">
             <div class="form-group col-md-6">
                 <form method="get" action="/session" class="form-inline mb-4">
-                    <input type="text" name="filter" class="form-control mr-2" value="${filter!""}" placeholder="Поиск по названию представления">
+                    <input type="text" name="filter" class="form-control mr-2 rounded-5" value="${filter!""}" placeholder="Поиск по названию представления">
                     <select name="hallId" class="form-control mr-2">
                         <option value="">Все залы</option>
                         <#list halls as hall>
                             <option value="${hall.id?c}">${hall.name}</option>
                         </#list>
                     </select>
-                    <button type="submit" class="btn btn-primary">Поиск</button>
+                    <select name="sortSession" class="form-control mr-2">
+                        <option value="asc" <#if sortSession == "asc">selected</#if>>По дате</option>
+                        <option value="mny" <#if sortSession == "mny">selected</#if>>По цене</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary rounded-circle" style="width: 40px; height: 40px; padding: 0; display: flex; align-items: center; justify-content: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg></button>
                 </form>
             </div>
         </div>

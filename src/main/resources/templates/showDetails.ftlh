@@ -8,7 +8,7 @@
                 <p><b>Жанр:</b> ${show.ganre}</p>
                 <p><b>Длительность:</b> ${show.duration} мин</p>
                 <p><b>Возрастное ограничение:</b> ${show.ageRating}+</p>
-                <a href="/shows/${show.id?c}/sessions" class="btn btn-primary">Выбрать сеанс</a>
+                <a href="/session?filter=${show.title}&hallId=&sortSession=asc" class="btn btn-primary">Выбрать сеанс</a>
             </div>
 
             <!-- Картинка справа -->

@@ -62,13 +62,14 @@
         }
     </style>
 
-    <div>
-        <h3>Список спектаклей</h3>
-    </div>
+
     <div class="form-group row">
-        <form method="get" action="/main" class="form-inline">
-            <input type="text" name="filter" value="${filter!""}" class="form-control mr-2" placeholder="Название представления">
-            <button type="submit" class="btn btn-primary">Найти</button>
+        <form method="get" action="/main" class="form-inline" >
+            <input type="text" name="filter" value="${filter!""}" class="form-control mr-2 " style="width: 300px" placeholder="Название представления">
+            <button type="submit" class="btn btn-primary rounded-circle" style="width: 40px; height: 40px; padding: 0; display: flex; align-items: center; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg></button>
         </form>
     </div>
 

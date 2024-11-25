@@ -34,29 +34,32 @@ public class SessionsController {
     @GetMapping
     public String sessionList(@RequestParam(value = "filter", required = false, defaultValue = "") String filter,
                               @RequestParam(value = "hallId", required = false) Long hallId,
+                              @RequestParam(value = "sortSession", required = false, defaultValue = "asc") String sortSession,
                               Model model) {
         List<Show> shows =  showRepo.findByTitle(filter);
         List<Session> sessions;
         Optional<Hall> hall = hallId == null ? Optional.empty() : hallRepo.findById(hallId);
-
+        Date currentDate = new Date();
         if ((filter != null && !filter.isEmpty()) && hallId != null) {
-            sessions = sessionRepo.findByShowInAndHall(shows, hall.get());
+            sessions = sessionRepo.findByShowInAndHallAndDateAfter(shows, hall.get(), currentDate);
         } else if ((filter != null && !filter.isEmpty())) {
-            sessions = sessionRepo.findByShowIn(shows);
+            sessions = sessionRepo.findByShowInAndDateAfter(shows, currentDate);
         } else if (hallId != null) {
-            sessions = sessionRepo.findByHall(hall.get());
+            sessions = sessionRepo.findByHallAndDateAfter(hall.get(), currentDate);
         } else {
-            sessions = sessionRepo.findAll();
+            sessions = sessionRepo.findByDateAfter(currentDate);
         }
-        System.out.println("Filter: " + filter);
-        System.out.println("Hall ID: " + hallId);
-        System.out.println("Hall: " + hall);
-        System.out.println("Sessions: " + sessions.size());
+        if ("mny".equalsIgnoreCase(sortSession)) {
+            sessions.sort(Comparator.comparing(Session::getPrice));
+        } else {
+            sessions.sort(Comparator.comparing(Session::getDate));
+        }
 
         model.addAttribute("shows", shows);
         model.addAttribute("halls", hallRepo.findAll());
         model.addAttribute("sessions", sessions);
         model.addAttribute("filter", filter);
+        model.addAttribute("sortSession", sortSession);
         return "sessionList";
     }
 

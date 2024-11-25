@@ -19,6 +19,7 @@ import ru.VladHendel.repos.ShowRepo;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -54,17 +55,7 @@ public class MainController {
     }
 
 
-    @GetMapping("/shows/{showId}/sessions")
-    public String showSessions(@PathVariable Long showId, Model model) {
-        Show show = showRepo.findById(showId)
-                .orElseThrow(() -> new RuntimeException("Спектакль не найден"));
 
-        List<Session> sessions = sessionRepo.findByShow(show);
-        model.addAttribute("show", show);
-        model.addAttribute("sessions", sessions);
-
-        return "sessionsForShow";
-    }
     @GetMapping("/shows/{showId}")
     public String showDetails(@PathVariable Long showId, Model model) {
         Show show = showRepo.findById(showId)
