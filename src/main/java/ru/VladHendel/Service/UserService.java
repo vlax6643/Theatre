@@ -36,12 +36,12 @@ public class UserService implements UserDetailsService {
 
     @Transactional
     public boolean deleteById(Long userId) {
-        Optional<User> user = usersRepo.findById(userId); // Ищем пользователя по ID
+        Optional<User> user = usersRepo.findById(userId);
         if (user.isPresent()) {
-            usersRepo.deleteById(userId); // Удаляем, если пользователь существует
+            usersRepo.deleteById(userId);
             return true;
         }
-        return false; // Возвращаем false, если пользователь не найден
+        return false;
     }
 
     public List<User> findAll(){

@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c16df447-0cc3-4a04-910a-b36cfc9b6643" name="Changes" comment="End version">
+    <list default="true" id="c16df447-0cc3-4a04-910a-b36cfc9b6643" name="Changes" comment="add img for init default tables">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/HallRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/VladHendel/repos/HallRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftlh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +19,7 @@
         <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -91,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1731523516415</updated>
       <workItem from="1731523517557" duration="8224000" />
-      <workItem from="1731613288965" duration="220833000" />
+      <workItem from="1731613288965" duration="227868000" />
     </task>
     <task id="LOCAL-00001" summary="End version with out design, logs and stat req">
       <option name="closed" value="true" />
@@ -109,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732559869047</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add img for init default tables">
+      <option name="closed" value="true" />
+      <created>1732571900660</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732571900660</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +138,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="End version with out design, logs and stat req" />
     <MESSAGE value="End version" />
-    <option name="LAST_COMMIT_MESSAGE" value="End version" />
+    <MESSAGE value="add img for init default tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="add img for init default tables" />
   </component>
 </project>

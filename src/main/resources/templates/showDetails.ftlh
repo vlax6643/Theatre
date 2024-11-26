@@ -2,7 +2,7 @@
 <@c.page>
     <div class="container mt-4">
         <div class="row align-items-start">
-            <!-- Контент слева -->
+
             <div class="col-md-8">
                 <h1>${show.title}</h1>
                 <p><b>Жанр:</b> ${show.ganre}</p>
@@ -11,7 +11,7 @@
                 <a href="/session?filter=${show.title}&hallId=&sortSession=asc" class="btn btn-primary">Выбрать сеанс</a>
             </div>
 
-            <!-- Картинка справа -->
+
             <div class="col-md-4">
                 <#if show.filename??>
                     <img
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <!-- Описание снизу -->
+
         <div class="mt-4">
             <#if show.description??>
                 <p>${show.description!''}</p>

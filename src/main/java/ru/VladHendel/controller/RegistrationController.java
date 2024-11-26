@@ -26,7 +26,7 @@ public class RegistrationController {
         return "registration";
     }
 
-    @PostMapping("/registration") // Добавлен слэш для консистентности
+    @PostMapping("/registration")
     public String addUser(User user, Model model){
         User userFromDb = usersRepo.findByUsername(user.getUsername());
         if (userFromDb != null){

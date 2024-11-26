@@ -33,7 +33,7 @@ public class ProfileController {
         return "profile";
     }
 
-    // Детали заказа
+
     @GetMapping("/orders/{orderId}")
     public String viewOrderDetails(@PathVariable Long orderId, Model model) {
         Order order = orderRepo.findById(orderId).orElseThrow(() ->
@@ -42,7 +42,7 @@ public class ProfileController {
         return "orderDetails";
     }
 
-    // Отмена заказа
+
     @PostMapping("/orders/{orderId}/cancel")
     public String cancelOrder(@PathVariable Long orderId) {
         orderRepo.deleteById(orderId);

@@ -2,7 +2,7 @@
 <@c.page>
     <div class="container my-4">
 
-        <!-- Форма для добавления нового шоу -->
+
         <div class="card mb-4">
             <div class="card-header">
                 <h5>Добавить новое шоу</h5>
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <!-- Список шоу -->
+
         <#list shows as show>
             <div class="card mb-3">
                 <div class="card-body">

@@ -38,28 +38,28 @@ public class OrdersController {
 
     @GetMapping("/{id}")
     public String showSession(@PathVariable Long id, Model model) {
-        // Получаем сеанс по ID
+
         Session session = sessionRepo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Session not found"));
 
-        // Получаем зал, связанный с сеансом
+
         Hall hall = session.getHall();
         if (hall == null) {
             throw new RuntimeException("Hall not found for session with ID: " + id);
         }
 
-        // Создаем карту для статусов мест
+
         Map<String, Boolean> seatStatus = session.getSeatStatus(session.getOrders(), hall);
 
         System.out.println("Session ID: " + session.getId());
         System.out.println("Hall Name: " + hall.getName());
         System.out.println("Seat Status: " + seatStatus);
-        // Передаем данные в модель
+
         model.addAttribute("session", session);
         model.addAttribute("hall", hall);
         model.addAttribute("seatStatus", seatStatus);
 
-        return "hallForSession"; // Переход на шаблон
+        return "hallForSession";
     }
 
     @Transactional

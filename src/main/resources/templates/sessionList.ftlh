@@ -28,7 +28,7 @@
         <#list sessions as session>
             <div class="card mb-4 shadow-sm">
                 <div class="row g-0">
-                    <!-- Изображение сеанса с закругленными углами -->
+
                     <div class="col-md-4">
                         <#if session.show.filename??>
                             <img src="/img/${session.show.filename}" class="img-fluid rounded-start-5 p-2" style="height: 100%; object-fit: cover;" alt="${session.show.title}">
@@ -36,7 +36,7 @@
                             <img src="/img/placeholder.jpg" class="img-fluid rounded-start-5 p-2" style="height: 100%; object-fit: cover;" alt="${session.show.title}">
                         </#if>
                     </div>
-                    <!-- Содержимое карточки -->
+
                     <div class="col-md-8">
                         <div class="card-body d-flex flex-column h-100">
                             <a href="/shows/${session.show.id?c}" class="text-decoration-none text-dark">

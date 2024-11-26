@@ -2,7 +2,6 @@
 <@c.page>
     <div class="container my-4">
 
-        <!-- Форма для добавления нового сеанса -->
         <div class="card mb-4">
             <div class="card-header">
                 <h5>Добавить новый сеанс</h5>
@@ -48,7 +47,6 @@
 
 
 
-        <!-- Список сеансов -->
         <h5>Список сеансов</h5>
         <#if sessions?has_content>
             <table class="table table-striped">

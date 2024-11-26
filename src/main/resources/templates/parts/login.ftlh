@@ -1,7 +1,7 @@
 <#macro login path isRegisterForm>
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <div class="card p-4" style="width: 400px;">
-            <#-- Отображение сообщения об ошибке, если оно есть -->
+
             <#if errorMessage??>
                 <div class="alert alert-danger" role="alert">
                     ${errorMessage}

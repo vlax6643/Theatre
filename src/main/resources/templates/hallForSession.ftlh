@@ -1,5 +1,5 @@
 <#import "parts/common.ftlh" as c>
-<!-- Добавьте эти стили в ваш шаблон или в отдельный CSS файл -->
+
 
 <@c.page>
     <div class="container text-center">
@@ -55,7 +55,6 @@
 
 
 
-<!-- Обновлённый JavaScript -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const selectedSeats = new Set();
@@ -63,16 +62,16 @@
         const selectedSeatsList = document.getElementById('selectedSeatsList');
         const totalCost = document.getElementById('totalCost');
         const confirmButton = document.getElementById('confirmButton');
-        const sessionPrice = ${session.price?c}; // Используйте ?json для корректной передачи числа
+        const sessionPrice = ${session.price?c};
 
-        // Инициализация тултипов Bootstrap
+
         const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
         const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl);
         });
 
         seatButtons.forEach(btn => {
-            // Пропускаем кнопки, которые уже заняты
+
             if (btn.disabled) {
                 return;
             }
@@ -81,13 +80,13 @@
                 const seat = btn.getAttribute('data-seat');
 
                 if (selectedSeats.has(seat)) {
-                    // Удаление выбранного места
+
                     selectedSeats.delete(seat);
                     btn.classList.remove('btn-warning');
                     btn.classList.add('btn-success');
                     btn.innerHTML = '<span class="material-symbols-outlined">chair</span>';
                 } else {
-                    // Добавление выбранного места
+
                     selectedSeats.add(seat);
                     btn.classList.remove('btn-success');
                     btn.classList.add('btn-warning');
@@ -99,7 +98,7 @@
         });
 
         function updateUI() {
-            // Обновление списка выбранных мест
+
             selectedSeatsList.innerHTML = '';
             selectedSeats.forEach(seat => {
                 const li = document.createElement('li');
@@ -107,11 +106,11 @@
                 selectedSeatsList.appendChild(li);
             });
 
-            // Расчёт общей стоимости
+
             const cost = selectedSeats.size * sessionPrice;
             totalCost.textContent = cost;
 
-            // Обновление скрытого поля с выбранными местами
+
             document.getElementById('selectedSeats').value = Array.from(selectedSeats).join(',');
             confirmButton.disabled = selectedSeats.size === 0;
         }

@@ -1,16 +1,16 @@
 <#macro showlist>
-    <!-- Дополнительные стили для наложения и текстовых элементов -->
+
     <style>
         .card-custom {
-            border-radius: 15px; /* Закругленные углы */
-            overflow: hidden; /* Обрезка содержимого по углам */
-            position: relative; /* Для позиционирования наложения и текста */
-            width: 35rem; /* Увеличенная ширина карточки */
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            width: 35rem;
         }
 
         .card-custom img {
-            height: 450px; /* Увеличенная высота изображения */
-            object-fit: cover; /* Изображение заполняет область без искажений */
+            height: 450px;
+            object-fit: cover;
             width: 100%;
         }
 
@@ -20,12 +20,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.35); /* Затемнение на 35% */
+            background-color: rgba(0, 0, 0, 0.35);
             transition: background-color 0.3s ease;
         }
 
         .card-custom:hover .overlay {
-            background-color: rgba(0, 0, 0, 0.45); /* Затемнение на 45% при наведении */
+            background-color: rgba(0, 0, 0, 0.45);
         }
 
         .card-custom .card-body {
@@ -34,9 +34,9 @@
             left: 0;
             width: 100%;
             padding: 15px;
-            background: transparent; /* Убираем белый фон */
-            color: #fff; /* Белый текст */
-            /* Добавляем тень для лучшей читаемости текста */
+            background: transparent;
+            color: #fff;
+
             text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
         }
 
@@ -49,7 +49,7 @@
             font-size: 0.9rem;
         }
 
-        /* Стили для карточки при отсутствии спектаклей */
+
         .card-custom.no-shows .card-body {
             background: rgba(255, 255, 255, 1);
             color: #000;
@@ -74,9 +74,9 @@
     </div>
 
     <div id="multiItemCarousel" class="carousel slide" data-ride="carousel" style="max-width: 1300px; margin: 0 auto;">
-        <!-- Слайды -->
+
         <div class="carousel-inner">
-            <#assign chunkSize = 3> <!-- Количество карточек на одном слайде -->
+            <#assign chunkSize = 3>
             <#list shows?chunk(chunkSize) as chunk>
                 <div class="carousel-item <#if chunk?index == 0>active</#if>">
                     <div class="d-flex justify-content-center">
@@ -119,7 +119,7 @@
             </#if>
         </div>
 
-        <!-- Управление -->
+
         <a class="carousel-control-prev" href="#multiItemCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Предыдущий</span>

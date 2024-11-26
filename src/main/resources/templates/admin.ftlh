@@ -7,7 +7,7 @@
     <div>
         <h1>Admin Panel</h1>
 
-        <!-- Управление спектаклями -->
+
         <div>
             <h2>Add a New Show</h2>
             <form action="/admin/addShow" method="post" enctype="multipart/form-data">
@@ -41,7 +41,7 @@
         <#else>
             <div>No shows available</div>
         </#list>
-        <!-- Управление жанрами -->
+
         <div>
             <h2>Add a New Genre</h2>
             <form action="/admin/addGanre" method="post">
@@ -61,7 +61,6 @@
             <div>No genres available</div>
         </#list>
 
-        <!-- Управление пользователями -->
         <div>
             <h2>Manage Users</h2>
             <a href="/user">Go to User Management</a>

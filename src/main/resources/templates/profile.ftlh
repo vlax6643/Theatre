@@ -3,7 +3,7 @@
     <div class="container mt-5">
         <h2>Профиль пользователя</h2>
 
-        <!-- Основная информация -->
+
         <div class="card mt-4">
             <div class="card-body">
                 <h5 class="card-title">Привет, ${user.username}!</h5>
@@ -14,7 +14,6 @@
             </div>
         </div>
 
-        <!-- Список заказов -->
         <div class="card mt-4">
             <div class="card-body">
                 <h5 class="card-title">Ваши заказы</h5>

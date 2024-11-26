@@ -15,13 +15,13 @@
                     <input type="hidden" name="_csrf" value="${_csrf.token}" />
                     <input type="hidden" name="sessionId" value="${session.id?c}">
 
-                    <!-- Цена -->
+
                     <div class="mb-3">
                         <label for="price" class="form-label">Цена билета</label>
                         <input type="number" step="0.01" class="form-control" id="price" name="price" value="${session.price}" required>
                     </div>
 
-                    <!-- Дата и время -->
+
                     <div class="mb-3">
                         <label for="date" class="form-label">Дата и время сеанса</label>
                         <input type="datetime-local" class="form-control" id="date" name="date" value="${session.date?string("yyyy-MM-dd'T'HH:mm")}" required>
